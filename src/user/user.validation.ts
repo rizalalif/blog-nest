@@ -6,4 +6,11 @@ export class UserValidation {
         email: z.email(),
         password: z.string().min(8)
     })
+
+    static readonly LOGIN: ZodType = z.object({
+        email: z.email(),
+        password: z.string().min(8)
+    }).required()
+
+
 }
